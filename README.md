@@ -1,7 +1,7 @@
-# Corydora Kanei
+# Guppy Endler
 
-> Corydoras kanei is a small species of catfish from the family Callyichthydae endemic to Brazil where it is found in the Negros River basin.
-
+> Poecilia wingei, known to aquarists as Endlers or Endler's livebearer, in the genus Poecilia, is a small fish native to the Paria Peninsula in Venezuela.[1] They are prolific breeders and often hybridize with guppies. These very colorful hybrids are the easiest to find being offered in pet-shops, typically under the name Endler's guppy.
+>
 This Simple Base App is a foundation for any quick Rails project. It helps you previous testing resources and funcionalities 
 
 # Summary
