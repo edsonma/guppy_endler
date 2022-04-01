@@ -1,0 +1,16 @@
+.card-box
+  - if species.present?
+    table.table.stripe.hover
+      thead.thead-light
+        tr
+          th 'Name'
+      tbody
+        - species.each do |specie|
+          tr 
+            td
+                p.bold.font-20
+                  = specie.name
+  - else
+      .text-center
+        | Registros não foram encontrados
+

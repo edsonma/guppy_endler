@@ -33,6 +33,5 @@ module CorydoraKanei
     config.serve_static_assets = true
 
     config.generators.system_tests = nil
-    config.api_only = true
   end
 end
