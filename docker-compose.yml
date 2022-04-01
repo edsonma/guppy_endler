@@ -1,7 +1,7 @@
 version: "2"
 services:
   mongo:
-    container_name: guppy-endler-db
+    container_name: guppy_endler-db
     image: mongo
     ports:
       - 27017:27017
