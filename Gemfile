@@ -20,6 +20,10 @@ gem 'slim'
 gem 'slim-rails'
 # bootstrapping
 gem 'bootstrap', '~> 5.1.3'
+# Use Json Web Token (JWT) for token based authentication
+gem 'jwt'
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
