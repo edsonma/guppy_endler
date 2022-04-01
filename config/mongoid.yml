@@ -11,7 +11,7 @@ production:
 development:
   clients:
     default:
-      database: corydora_kanei_development
+      database: guppy_endler_development
       hosts:
         - localhost:27017
       options:
@@ -21,7 +21,7 @@ development:
 test:
   clients:
     default:
-      database: corydora_kanei_test
+      database: guppy_endler_test
       hosts:
         - localhost:27017
       options:
