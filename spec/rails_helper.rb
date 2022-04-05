@@ -27,6 +27,7 @@ require 'rspec/rails'
 # Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 RSpec.configure do |config|
+  config.include(FactoryBot::Syntax::Methods)
   config.include(Mongoid::Matchers, type: :model)
 
   # Remove this line to enable support for ActiveRecord
