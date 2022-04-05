@@ -2,7 +2,7 @@
 
 module Api
   module V1
-    class SpeciesController < ActionController::API
+    class SpeciesController < ApiController
       before_action :set_specie, only: %i[show]
 
       def index
@@ -11,6 +11,11 @@ module Api
       end
 
       def show
+        if @specie.blank?
+          render(json: { errors: 'not found' },
+                 status: :not_found) and return
+        end
+
         render(json: @specie)
       end
 

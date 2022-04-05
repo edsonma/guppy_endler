@@ -28,12 +28,13 @@ module CorydoraKanei
 
     config.autoloader = :classic
     config.time_zone = ENV.fetch('TZ', 'Brasilia')
-    config.i18n.default_locale = 'pt-BR'
+    config.i18n.default_locale = 'en'
     config.i18n.fallbacks = [:en]
     config.beginning_of_week = :sunday
     config.assets.enabled = true
     config.serve_static_assets = true
 
     config.generators.system_tests = nil
+    config.exceptions_app = routes
   end
 end
