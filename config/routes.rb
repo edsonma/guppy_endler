@@ -10,16 +10,16 @@ Rails.application.routes.draw do
   scope constraints: { format: :json } do
     namespace :api do
       namespace :v1 do
-        get '/species' => 'species#index'
-        get '/species/:id' => 'species#show'
-        post '/auth/login', to: 'authentication#login'
+        resources :species, only: %i[index show]
         resources :users
+
+        post '/auth/login', to: 'authentication#login'
       end
     end
   end
 
   scope constraints: { format: :html } do
-    get '/species' => 'species#index'
+    resources :species, only: %i[index show]
   end
 
   root to: 'species#index'

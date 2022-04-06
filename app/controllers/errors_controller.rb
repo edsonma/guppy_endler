@@ -32,7 +32,7 @@ class ErrorsController < ApplicationController
   def service_unavailable
     respond_to do |format|
       format.json { render(json: { error: 'service_unavailable' }, status: :service_unavailable) }
-      format.html { render(status: :service_unavailabler) }
+      format.html { render(status: :service_unavailable) }
     end
   end
 end
