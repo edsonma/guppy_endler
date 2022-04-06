@@ -2,6 +2,7 @@
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+
 ENV['RAILS_ENV'] ||= 'test'
 
 require_relative '../config/environment'
@@ -27,10 +28,8 @@ require 'rspec/rails'
 # Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 RSpec.configure do |config|
+  config.include(FactoryBot::Syntax::Methods)
   config.include(Mongoid::Matchers, type: :model)
-
-  # Remove this line to enable support for ActiveRecord
-  config.use_active_record = false
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :deletion
@@ -42,6 +41,14 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  # %i[controller system helper].each do |type|
+  #   config.include(ControllerHelpers, type: type)
+  # end
+
+  # Remove this line to enable support for ActiveRecord
+  config.use_active_record = false
+
   # If you enable ActiveRecord support you should unncomment these lines,
   # note if you'd prefer not to run each example within a transaction, you
   # should set use_transactional_fixtures to false.

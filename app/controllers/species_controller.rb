@@ -8,7 +8,7 @@ class SpeciesController < ApplicationController
   end
 
   def show
-    render(@specie)
+    @specie
   end
 
   private def set_specie
